@@ -1,0 +1,31 @@
+list is empty
+List is not full
+List Items: 81012 Eman 
+list is not empty
+List Items: 81012 Eman 81121 Prasanth 
+Item is not in the list
+Item is not in the list
+List is not full
+Item at index 1 is:Index is out of range
+1
+Item is not in the list
+List Items: 81012 Eman 81001 John 82887 Thomas 81056 Roger 81321 Johnathan 82877 Tom 81706 Roman 81721 Johnny 82817 Zane 81709 Rand 
+List is full
+Item at index 3 is:81056 Roger
+List is full, Insertion failed
+List Items: 81012 Eman 81001 John 82887 Thomas 81056 Roger 81321 Johnathan 82877 Tom 81706 Roman 81709 Rand 82817 Zane 
+Duplicate Item, Insertion failed
+List Items: 81012 Eman 81001 John 82887 Thomas 81056 Roger 81321 Johnathan 82877 Tom 81706 Roman 81709 Rand 
+list is empty
+0
+List Items: 
+Unrecognized command 
+Item at index 0 is:81001 John
+Item at index 7 is:82817 Zane
+Item at index 8 is:Index is out of range
+Item at index 9 is:Index is out of range
+List Items: 81001 John 81709 Rand 81056 Roger 81321 Johnathan 82877 Tom 81706 Roman 81721 Johnny 82817 Zane 
+8
+Item at index 0 is:82817 Zane
+List Items: 82817 Zane 81709 Rand 81056 Roger 81321 Johnathan 82877 Tom 81706 Roman 81721 Johnny 
+7

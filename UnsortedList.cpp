@@ -1,0 +1,136 @@
+#include <iostream>
+using namespace std;
+#include "UnsortedList.h"
+template <class ItemType>
+UnsortedList<ItemType>::UnsortedList()
+// No argumentconstructor
+// Post: Max_Items initialized to 50 and Length have been initialized.
+// The array to hold the list elements has been allocated.
+{
+	Max_Items = 50;
+	length = 0;
+	info = new ItemType[Max_Items];
+}
+
+
+template <class ItemType>
+UnsortedList<ItemType>::UnsortedList(int max)
+// constructor
+// Post: Max_Itemms and Length have been initialized.
+// The array to hold the list elements has been allocated.
+{
+	Max_Items = max;
+	length = 0;
+	info = new ItemType[Max_Items];
+}
+
+template <class ItemType>
+UnsortedList<ItemType>::~UnsortedList()         // Class destructor
+{
+	delete[] info;
+}
+
+template <class ItemType>
+void UnsortedList<ItemType>::makeEmpty()
+// Post: Length has been reset to the empty state.
+{
+	this->length = 0;
+}
+
+template <class ItemType>
+bool UnsortedList<ItemType>::isEmpty() const
+// Returns true if the List is empty; false otherwise.
+{
+	if (getLength() == 0)
+		return true;
+	else
+		return false;
+}
+
+template <class ItemType>
+bool UnsortedList<ItemType>::isFull() const
+// Returns true if the List is full; false otherwise.
+{
+	if (getLength() == getMax_Items())
+		return true;
+	else
+		return false;
+
+}
+
+template <class ItemType>
+void UnsortedList<ItemType>::putItem(ItemType newItem)
+// adds newItem to the end of the list.
+{
+	if (isFull()) {
+        throw FullList();
+    }
+    // checks if item is already in list
+    if (findIndex(newItem) != -1) {
+        throw DuplicateItem();
+    }
+
+    // add newItem to end of list
+    info[getLength()] = newItem;
+    length++;
+}
+
+template <class ItemType>
+void UnsortedList<ItemType>::deleteItem(ItemType item)
+// removes an element from the list.
+{
+    int index = findIndex(item);
+    if (index == -1) {
+        throw ItemNotFound();
+    }
+    else {
+        if (index == (length - 1)) {
+            length--;
+            return;
+        } else {
+            info[index] = info[length - 1];
+            length--;
+        }
+    }
+}
+
+template <class ItemType>
+int UnsortedList<ItemType>::getLength() const
+// returns true if the List is full; false otherwise.
+{
+    return this->length;
+}
+
+template <class ItemType>
+int UnsortedList<ItemType>::getMax_Items() const
+// returns true if the List is full; false otherwise.
+{
+    return this->Max_Items;
+}
+
+template <class ItemType>
+ItemType UnsortedList<ItemType>::getAt(int index) const
+// returns the element at the specified position (index) in this list.
+{
+    if (index < 0 || index >= getLength()) {
+        throw OutofBound();
+    }
+    else {
+        return info[index];
+    }
+}
+
+template <class ItemType>
+int UnsortedList<ItemType>::findIndex(ItemType item) const
+//
+{
+    // checks if item is already in list
+    int incrementer = 0;
+    while(incrementer < getLength()) {
+        if (item == getAt(incrementer)) {
+            return incrementer;
+        }
+        incrementer++;
+    }
+    return -1;
+}

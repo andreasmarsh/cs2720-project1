@@ -1,0 +1,17 @@
+project1/:
+total 56
+-rw-r--r--. 1 myid  254 Sep  8 18:20 intcommands2.txt
+-rw-r--r--. 1 myid  374 Sep 15 16:06 intcommands.txt
+-rw-r--r--. 1 myid  450 Sep  8 19:58 Makefile
+-rw-r--r--. 1 myid  876 Sep 15 16:22 outFile.txt
+-rw-r--r--. 1 myid  147 Sep  8 19:58 README.TXT
+-rw-r--r--. 1 myid    0 Sep 15 16:25 rec10565
+-rw-r--r--. 1 myid  738 Sep  8 20:03 rec18068
+-rw-r--r--. 1 myid  162 Sep  8 18:45 studcommands2.txt
+-rw-r--r--. 1 myid  819 Sep 15 16:22 studcommands.txt
+-rw-r--r--. 1 myid 1438 Sep  8 19:42 Student.cpp
+-rw-r--r--. 1 myid  822 Sep  8 19:47 Student.h
+-rw-r--r--. 1 myid 2978 Sep 15 16:21 UnsortedList.cpp
+-rw-r--r--. 1 myid 4758 Sep 15 16:14 UnsortedListDriver.cpp
+-rw-r--r--. 1 myid 2187 Sep  8 16:15 UnsortedList.h
+/home/myid/asm38587/project1/:/home/myid/csci-2720
